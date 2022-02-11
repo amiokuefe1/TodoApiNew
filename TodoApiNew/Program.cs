@@ -93,5 +93,7 @@ class TodoDb : DbContext
     public TodoDb(DbContextOptions<TodoDb> options) //TodoDb Constructor(TypeCast<TodoDb> to have options parameters/ or receive options argument which is inherited from DBContext Options)
         : base(options) { }
 
-    public DbSet<Todo> Todos => Set<Todo>(); // what does this mean? I'd probably get the answer from studying Entity FrameWork Core
+    public DbSet<Todo> Todos => Set<Todo>(); // what does this mean? I'd probably get the answer from studying Entity FrameWork Core. 
+    //Perhaps this where we include and set our Data Class Model as a representation of the DB Structure. 
+    //which also seems to be an implementation of repository pattern if seperation of concerns were implemented as well
 }
